@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub - Recipes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo-text">🍳 Foodie Hub</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<div class="search-box">
+    <h3>Search Drinks Recipes</h3>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterRecipes()">
+</div>
+
+<h2 style="color:#b599ff; padding:5px;">Drinks Recipes</h2>
+
+<div id="recipeList" class="recipes">
+
+        <div class="card" onclick="location.href='chocolate-milkshake.html'">
+        <img class="card-img" src="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/bltd2f0b951708bdfce/66707638b76a9292bd908d6f/chocolate-truffle-featured-image.jpg?q=70&width=3840&auto=webp">
+        Chocolate Milkshake
+    </div>
+
+        <div class="card" onclick="location.href='hot-chocolate.html'">
+        <img class="card-img" src="https://assets.epicurious.com/photos/672aa2e70dd597529f332818/4:3/w_4444,h_3333,c_limit/hot-cocoa-vs-hot-chocolate_RECIPE_V1_103124_7088_VOG_final.jpg">
+        Hot Chocolate
+    </div>
+
+</div>
+
+<script>
+function filterRecipes(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>

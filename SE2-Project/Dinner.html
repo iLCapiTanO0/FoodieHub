@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub - Recipes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo-text">🍳 Foodie Hub</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<div class="search-box">
+    <h3>Search Dinner Recipes</h3>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterRecipes()">
+</div>
+
+<h2 style="color:#b599ff; padding:5px;">Dinner Recipes</h2>
+
+<div id="recipeList" class="recipes">
+
+    <div class="card" onclick="location.href='Caesar Salad.html'">
+        <img class="card-img" src="https://www.noracooks.com/wp-content/uploads/2022/06/vegan-caesar-salad-4.jpg">
+        Caesar Salad
+    </div>
+
+        <div class="card" onclick="location.href='popcorn.html'">
+        <img class="card-img" src="https://www.legami.com/dw/image/v2/BDSQ_PRD/on/demandware.static/-/Sites-legami-master-catalog/default/dwdb7bb6fa/images_legami/zoom/PCB0001_1.jpg?sw=768&sh=768">
+        Popcorn
+    </div>
+
+</div>
+
+<script>
+function filterRecipes(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+/* GENERAL */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fafafa;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#5fa8ff;
+    padding:15px 20px;
+    border-radius:0 0 15px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-text{
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.nav-links a{
+    margin:0 10px;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+.container{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* LOGIN PAGE */
+.center-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 15px #ccc;
+}
+
+.logo{
+    width:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto 15px auto;
+    box-shadow:0 0 15px #000000;
+}
+
+.input-field{
+    width:250px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin:10px 0;
+}
+
+.button-row button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn.dark{
+    background:#000;
+    color:#fff;
+}
+
+/* SEARCH BOX */
+.search-box{
+    background:#ffe96a;
+    padding:20px;
+    border-radius:15px;
+    margin:20px;
+}
+
+.search-box input{
+    width:80%;
+    padding:10px;
+    border-radius:20px;
+    border:1px solid #ccc;
+}
+
+/* RECIPES GRID */
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 10px 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* CARD STYLE */
+.card{
+    width: 90%;
+    background:#b599ff;
+    border-radius:15px;
+    padding:10px;
+    cursor:pointer;
+    color:#fff;
+    text-align:center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    font-weight:bold;
+}
+
+/* CARD IMAGE */
+.card img,
+.card-img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+/* EXTRA ELEMENTS */
+.title{
+    font-size:28px;
+    color:#b599ff;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.rating{
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.image-box{
+    width:100%;
+    max-width: 600px;
+    height:300px;
+    background:#fff;
+    border-radius:15px;
+    margin:20px auto;
+    box-shadow:0 0 15px #ccc;
+    overflow: hidden;
+}
+
+.info{
+    display:flex;
+    justify-content: center;
+    gap:15px;
+    flex-wrap:wrap;
+    font-size:14px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.info div{
+    background: #d8c9ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.box{
+    background:#e8e5f0;
+    padding:20px;
+    border-radius:10px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.box h4{
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.box ul, .box ol{
+    padding-left: 20px;
+}
+
+.box li{
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.flex{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top: 30px;
+}
+
+/* HERO SECTION */
+.hero{
+    background: url('https://img.freepik.com/free-photo/top-view-table-full-delicious-food-assortment_23-2149141350.jpg') center/cover;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero-content{
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px 25px;
+    border-radius: 15px;
+}
+
+.hero h1{
+    font-size: 34px;
+    margin: 0 0 10px;
+}
+
+.hero p{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.btn-explore{
+    background: #ffe96a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* CATEGORIES */
+.categories{
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.category-box{
+    background: #d8c9ff;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* POPULAR RECIPES SECTION */
+.popular{
+    margin: 30px 20px;
+}
+
+.popular h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ABOUT */
+.about{
+    background: white;
+    margin: 30px 20px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* CTA */
+.cta{
+    background:#5fa8ff;
+    padding: 30px 20px;
+    text-align:center;
+    margin-top: 30px;
+    color:#fff;
+}
+
+.cta button{
+    margin-top:10px;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+    /* Navbar adjustments */
+    .navbar{
+        padding: 12px 15px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .logo-text{
+        font-size: 16px;
+    }
+
+    .nav-links a{
+        margin: 0 8px;
+        font-size: 13px;
+    }
+
+    /* keep 2 cards per row */
+    .recipes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container{
+        padding: 0 15px;
+        margin: 15px auto;
+    }
+
+    .title{
+        font-size: 24px;
+    }
+
+    .rating{
+        font-size: 14px;
+    }
+
+    .image-box{
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .info{
+        gap: 8px;
+        margin: 15px 0;
+    }
+
+    .info div{
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .box{
+        width: 100%;
+        min-width: auto;
+        padding: 15px;
+    }
+
+    .box h4{
+        font-size: 16px;
+    }
+
+    .flex{
+        gap: 15px;
+        margin-top: 20px;
+    }
+}

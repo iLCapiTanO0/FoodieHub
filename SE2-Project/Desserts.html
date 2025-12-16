@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub - Recipes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo-text">🍳 Foodie Hub</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<div class="search-box">
+    <h3>Search Desserts Recipes</h3>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterRecipes()">
+</div>
+
+<h2 style="color:#b599ff; padding:5px;">Desserts Recipes</h2>
+
+<div id="recipeList" class="recipes">
+
+        <div class="card" onclick="location.href='chocolate-truffle-cake.html'">
+        <img class="card-img" src="https://bluebowlrecipes.com/wp-content/uploads/2023/08/chocolate-truffle-cake-8844.jpg">
+        Chocolate Truffle Cake
+    </div>
+
+</div>
+
+<script>
+function filterRecipes(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>

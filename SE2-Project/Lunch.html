@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub - Recipes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo-text">🍳 Foodie Hub</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="index.html">Logout</a>
+    </div>
+</nav>
+
+<div class="search-box">
+    <h3>Search Lunch Recipes</h3>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterRecipes()">
+</div>
+
+<h2 style="color:#b599ff; padding:5px;">Lunch Recipes</h2>
+
+<div id="recipeList" class="recipes">
+
+    <div class="card" onclick="location.href='Pasta Carbonara.html'">
+        <img class="card-img" src="https://www.culinaryhill.com/wp-content/uploads/2021/12/Spaghetti-Carbonara-Culinary-Hill-1200x800-1.jpg">
+        Pasta Carbonara
+    </div>
+
+    <div class="card" onclick="location.href='Chicken Curry.html'">
+        <img class="card-img" src="https://ichef.bbc.co.uk/ace/standard/1600/food/recipes/simple_chicken_curry_95336_16x9.jpg.webp">
+        Chicken Curry
+    </div>
+
+    <div class="card" onclick="location.href='Chicken Biryani.html'">
+        <img class="card-img" src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg">
+        Chicken Biryani
+    </div>
+
+</div>
+
+<script>
+function filterRecipes(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>
